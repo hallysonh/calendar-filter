@@ -1,0 +1,24 @@
+{
+  "manifest_version": 3,
+  "name": "Crunchyroll Calendar Filter",
+  "description": "Filter animes in Crunchyroll calendar",
+  "version": "1.0",
+  "action": {
+    "default_popup": "options.html"
+  },
+  "options_ui": {
+    "page": "options.html",
+    "open_in_tab": false
+  },
+  "content_scripts": [{
+    "css": ["content.css"],
+    "js": ["content.js"],
+    "matches": [
+      "https://www.crunchyroll.com/simulcastcalendar",
+      "https://www.crunchyroll.com/simulcastcalendar?*"
+    ]
+  }],
+  "permissions": [
+    "storage"
+  ]
+}
